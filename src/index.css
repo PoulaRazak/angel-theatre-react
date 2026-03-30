@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Kill horizontal scroll at the root — prevents any element overflow from creating a scrollbar */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -24,7 +24,7 @@ export default function Navbar() {
                 dir="rtl"
             >
                 {/* Logo + Brand */}
-                <div className="flex items-center gap-3" >
+                <a href="/" className="flex items-center gap-3" >
                     <img
                         className="w-8 md:w-12 h-8 md:h-12 object-contain drop-shadow-[0_0_8px_rgba(255,215,0,0.4)] "
                         src="src/assets/images/angel-logo1.png"
@@ -42,15 +42,15 @@ export default function Navbar() {
                     >
                         فريق الملاك المسرحي
                     </span>
-                </div>
+                </a>
 
                 {/* Nav Links */}
                 <div className="flex items-center gap-2">
                     {[
-                        { label: "الرئيسية" },
-                        { label: "العروض السابقة" },
-                        { label: "عن الفريق" },
-                    ].map(({ label }) => (
+                        { label: "الرئيسية", href: "/" },
+                        { label: "العروض السابقة", href: "#" },
+                        { label: "عن الفريق", href: "#" },
+                    ].map(({ label, href }) => (
                         <button
                             key={label}
                             className="relative px-4 py-2 text-sm font-semibold rounded-md cursor-pointer transition-all duration-300 group"
@@ -66,7 +66,7 @@ export default function Navbar() {
                                 className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                 style={{ background: "rgba(198,161,91,0.08)" }}
                             />
-                            <span className="relative z-10">{label}</span>
+                            <a href={href} className="relative z-10">{label}</a>
                         </button>
                     ))}
 

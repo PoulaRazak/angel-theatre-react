@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import AboutUs from './pages/Aboutus'
 import MainHome from './pages/MainPage'
 import OldShows from './pages/OldShows'
+import ShowDetails from './pages/ShowDetails'
 import AppRouter from './routes'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     // Navbar is fixed/overlay so it floats above the hero automatically
     <div style={{ overflowX: "hidden" }}>
      <AppRouter/>
+     {/* <ShowDetails/> */}
     </div>
   )
 }

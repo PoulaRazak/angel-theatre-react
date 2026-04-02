@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router"
+
 export default function TheatreCard({ show }) {
+    const navigate = useNavigate();
     return <>
         <div className="border border-[#c6a15b] m-8 rounded-lg shadow-md shadow-[#c6a15b] flex flex-col items-start p-2 gap-2 bg-[#1a120b]">
             {/* <img src={show.image} alt="show image" className="object-cover h-100 w-80" /> */}
@@ -10,7 +13,7 @@ export default function TheatreCard({ show }) {
             </figure>
             <div className="flex flex-row justify-between items-center w-full p-2">
                 <p>{show.name}</p>
-                <button className="text-[#c6a15b] border border-[#c6a15b] px-2 py-1 rounded-md cursor-pointer hover:bg-[#c6a15b] hover:text-[#1a120b]"> عن العرض  </button>
+                <button onClick={()=>navigate(`/show-details/${show.id}`)} className="text-[#c6a15b] border border-[#c6a15b] px-2 py-1 rounded-md cursor-pointer hover:bg-[#c6a15b] hover:text-[#1a120b]"> عن العرض  </button>
             </div>
         </div>
     </>

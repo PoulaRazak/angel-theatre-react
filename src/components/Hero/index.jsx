@@ -1,8 +1,11 @@
 import { useEffect, useRef, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useNavigate } from "react-router";
 
 export default function Hero() {
+    const navigate = useNavigate();
+
     const heroRef = useRef(null);
     const leftCurtain = useRef(null);
     const rightCurtain = useRef(null);
@@ -149,7 +152,7 @@ export default function Hero() {
                     يقدم لكم <br /> فريق الملاك المسرحي
                 </h1>
 
-                <button className="px-8 py-3 bg-[#c6a15b] text-black rounded-lg shadow-lg hover:scale-105 transition cursor-pointer">
+                <button onClick={() => navigate("/old-shows")} className="px-8 py-3 bg-[#c6a15b] text-black rounded-lg shadow-lg hover:scale-105 transition cursor-pointer">
                     مشاهدة العروض
                 </button>
             </div>

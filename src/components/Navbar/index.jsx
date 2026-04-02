@@ -1,4 +1,6 @@
+import label from "daisyui/components/label";
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -47,10 +49,11 @@ export default function Navbar() {
                 {/* Nav Links */}
                 <div className="flex items-center gap-2">
                     {[
-                        { label: "الرئيسية", href: "/" },
-                        { label: "العروض السابقة", href: "#" },
-                        { label: "عن الفريق", href: "#" },
-                    ].map(({ label, href }) => (
+                        { label: "الرئيسية", to: "/" },
+                        { label: "العروض السابقة", to: "/old-shows" },
+                        {label:"الورش المسرحية",to:"/workshops"},
+                        { label: "عن الفريق", to: "/about-us" },
+                    ].map(({ label, to }) => (
                         <button
                             key={label}
                             className="relative px-4 py-2 text-sm font-semibold rounded-md cursor-pointer transition-all duration-300 group"
@@ -66,7 +69,7 @@ export default function Navbar() {
                                 className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                 style={{ background: "rgba(198,161,91,0.08)" }}
                             />
-                            <a href={href} className="relative z-10">{label}</a>
+                            <Link to={to} className="relative z-10">{label}</Link>
                         </button>
                     ))}
 

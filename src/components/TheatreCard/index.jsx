@@ -1,6 +1,6 @@
 export default function TheatreCard({ show }) {
     return <>
-        <div className="border border-[#c6a15b] m-10 rounded-lg shadow-md shadow-[#c6a15b] flex flex-col items-start p-2 gap-2 bg-[#1a120b]">
+        <div className="border border-[#c6a15b] m-8 rounded-lg shadow-md shadow-[#c6a15b] flex flex-col items-start p-2 gap-2 bg-[#1a120b]">
             {/* <img src={show.image} alt="show image" className="object-cover h-100 w-80" /> */}
             <figure className="hover-gallery object-cover h-112 w-80">
                 <img src={show.image} />

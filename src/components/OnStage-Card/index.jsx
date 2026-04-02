@@ -1,7 +1,21 @@
+import { useEffect, useState } from "react";
 export default function OnStageCard() {
+
+
+
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => setShow(true), 800);
+    }, []);
     return <>
         <div className="border border-[#c6a15b] m-10 rounded-lg shadow-md shadow-[#c6a15b] flex flex-col items-start p-2 gap-2 bg-[#1a120b] relative">
-            <div className="badge badge-warning absolute top-3 left-3">
+            <div
+                className="badge badge-warning absolute top-3 left-3 rounded-full
+                backdrop-blur-md bg-white/20 text-white
+                shadow-xl shadow-black/30"
+
+            >
                 عرض جديد 🔥
             </div>
             <img src="src/assets/images/factoryshow.jpg" alt="" className="h-120 w-100 object-cover rounded-lg " />

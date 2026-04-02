@@ -39,7 +39,6 @@ export default function OldShows() {
         },
     ]
     return <>
-    <Navbar/>
         <TheatreBackground/>
     <h1 className="text-2xl text-[#c6a15b] font-bold text-center mt-25"> العروض السابقة  </h1>
     <div className="flex flex-wrap flex-row justify-center">
@@ -53,6 +52,5 @@ export default function OldShows() {
             })
         }
     </div>
-    <Footer/>
     </>
 }

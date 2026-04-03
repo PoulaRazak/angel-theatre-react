@@ -31,7 +31,12 @@ export default function OnStageCard() {
                 <p>50 جنيه</p>
             </div>
             <div className="flex flex-row text-white justify-between w-full p-2 items-center">
-                <p>1 موعد متاح</p>
+                <div className="flex flex-row items-center gap-2">
+                    <div className="inline-grid *:[grid-area:1/1] mt-1">
+                        <div className="status status-info animate-ping"></div>
+                        <div className="status status-info"></div>
+                    </div><p className="text-sm">1 موعد متاح</p>
+                </div>
                 <button className="mr-2 px-5 py-2 rounded-md text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                     style={{
                         background: "linear-gradient(135deg, #c6a15b, #e8c97a, #c6a15b)",

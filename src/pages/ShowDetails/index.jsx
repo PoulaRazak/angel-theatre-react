@@ -34,7 +34,7 @@ export default function ShowDetails() {
                     <button
                         className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-[#c6a15b] transition-colors"
                         onClick={() => setLightboxImg(null)}
-                    >&#x2715;</button>
+                    >✕</button>
                     <img
                         src={lightboxImg}
                         alt="fullscreen"
@@ -48,23 +48,25 @@ export default function ShowDetails() {
                 <img
                     src={show.image}
                     alt="showimg"
-                    className="md:w-100 w-[80%] h-130 rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                    className="md:w-80 w-[85%] h-118 rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
                     onClick={() => openImage(show.image)}
                 />
                 <div className="flex flex-col items-center justify-center gap-4 mt-8 border-2 border-[#c6a15b] md:w-1/2 w-[80%] rounded-lg p-4 bg-blur-sm">
-                    <h1 className="text-2xl text-[#c6a15b] font-bold text-center">&#x1F3AD; &#x639;&#x646; &#x627;&#x644;&#x639;&#x631;&#x636; </h1>
+                    <h1 className="text-2xl text-[#c6a15b] font-bold text-center">🎭 عن العرض </h1>
                     <p className="text-center text-white">{show.description}</p>
+                    <p className="text-center text-[#c6a15b]">سنة العرض: <span className="text-white">{show.year}</span></p>
                 </div>
-                <div className="border-2 border-[#c6a15b] mx-8 rounded-lg p-4 text-center">
-                    <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold mb-2">&#x1F947; &#x62C;&#x648;&#x627;&#x626;&#x632; &#x627;&#x644;&#x639;&#x631;&#x636;</p>
+                <div className="border-2 border-[#c6a15b] mx-8 rounded-lg p-2 text-center">
+                    <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold mb-2">🥇 جوائز العرض</p>
                     {show.awards.map((award, index) => (
-                        <p className="text-lg" key={index}>&#x1F3C6; {award}</p>
+                        <p className="text-lg" key={index}>🏆 {award}</p>
                     ))}
                 </div>
 
                 {/* Posters Carousel */}
+                {show.posters.length > 0 && (
                 <div className="border-2 border-[#c6a15b] mx-8 rounded-lg">
-                    <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold">&#x628;&#x648;&#x633;&#x62A;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x639;&#x631;&#x636; </p>
+                    <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold">بوسترات العرض </p>
                     <div className="carousel carousel-center bg-neutral rounded-box max-w-md h-100 space-x-4 p-4">
                         {[1,2,3,4,5,6,7,8,9,10,11,12].map((i) => (
                             show.posters[i] && (
@@ -79,12 +81,13 @@ export default function ShowDetails() {
                             )
                         ))}
                     </div>
-                    <p className="text-center text-white m-2">&#x627;&#x633;&#x62D;&#x628; &#x644;&#x644;&#x64A;&#x645;&#x64A;&#x646; &#x627;&#x648; &#x627;&#x644;&#x64A;&#x633;&#x627;&#x631;</p>
+                    <p className="text-center text-white m-2 text-sm"> اسحب يمينا ويسارا او اضغط للتكبير</p>
                 </div>
-
+                )}
                 {/* Show Photos Carousel */}
+                {show.carousel.length>0 && (
                 <div className="border-2 border-[#c6a15b] mx-8 rounded-lg">
-                    <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold">&#x635;&#x648;&#x631; &#x645;&#x646; &#x627;&#x644;&#x639;&#x631;&#x636; </p>
+                    <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold">صور من العرض </p>
                     <div className="carousel carousel-center bg-neutral rounded-box max-w-md h-100 space-x-4 p-4">
                         {[0,3,4,6,7,8,10,11,12,13,14,15,16,17,18,19,20].map((i) => (
                             show.carousel[i] && (
@@ -99,8 +102,9 @@ export default function ShowDetails() {
                             )
                         ))}
                     </div>
-                    <p className="text-center text-white m-2">&#x627;&#x633;&#x62D;&#x628; &#x644;&#x644;&#x64A;&#x645;&#x64A;&#x646; &#x627;&#x648; &#x627;&#x644;&#x64A;&#x633;&#x627;&#x631;</p>
+                    <p className="text-center text-white m-2 text-sm"> اسحب يمينا ويسارا او اضغط للتكبير</p>
                 </div>
+                )}
             </div>
         </>
     )

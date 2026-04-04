@@ -1,6 +1,6 @@
 import label from "daisyui/components/label";
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -69,7 +69,7 @@ export default function Navbar() {
                                 className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                 style={{ background: "rgba(198,161,91,0.08)" }}
                             />
-                            <Link to={to} className="relative z-10">{label}</Link>
+                            <NavLink to={to} className={({isActive})=>isActive?"text-[#c6a15b] relative z-10":"relative z-10"}>{label}</NavLink>
                         </button>
                     ))}
 

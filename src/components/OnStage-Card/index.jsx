@@ -21,7 +21,7 @@ export default function OnStageCard() {
             <img src="src/assets/images/factoryshow.jpg" alt="" className="h-120 w-100 object-cover rounded-lg " />
             <h2 className="text-xl text-white font-bold p-2 mt-2 mb-4"> مخلفات مصنع الكرتون </h2>
             <div className="text-white text-sm ">يعرض علي مسرح كنيسة مارجرجس الجيوشي - شبرا مصر</div>
-            <div className="text-white text-sm ">للأستفسارات يرجي التواصل علي الرقم  01220800797 </div>
+            <div className="text-white text-sm ">للأستفسارات يرجي التواصل علي الرقم  01274120056 </div>
             <div className="text-white text-sm p-2">المواعيد : </div>
             <div className="flex flex-row text-white justify-between w-full p-3 bg-[#000435] rounded-lg">
                 <div className="flex flex-row gap-3">

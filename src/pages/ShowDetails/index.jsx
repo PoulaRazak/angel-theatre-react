@@ -79,7 +79,7 @@ export default function ShowDetails() {
                                 <div key={i} className="carousel-item">
                                     <img
                                         src={show.posters[i]}
-                                        className="rounded-box cursor-pointer hover:opacity-80 transition-opacity object-cover"
+                                        className="rounded-box cursor-pointer hover:opacity-80 transition-opacity object-contain w-full h-full bg-black max-h-[400px]"
                                         onClick={() => openImage(show.posters[i])}
                                         alt={`poster-${i}`}
                                     />
@@ -100,7 +100,7 @@ export default function ShowDetails() {
                                 <div key={i} className="carousel-item">
                                     <img
                                         src={show.carousel[i]}
-                                        className="rounded-box cursor-pointer hover:opacity-80 transition-opacity object-cover"
+                                        className="rounded-box cursor-pointer hover:opacity-80 transition-opacity object-contain w-full h-full bg-black max-h-[400px]"
                                         onClick={() => openImage(show.carousel[i])}
                                         alt={`show-${i}`}
                                     />

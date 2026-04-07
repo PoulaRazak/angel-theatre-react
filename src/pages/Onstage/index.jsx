@@ -8,6 +8,7 @@ export default function OnStage() {
     const [whatsapp, setWhatsapp] = useState("");
     const [file, setFile] = useState("");
     const [show, setShow] = useState(false);
+    const [status, setStatus] = useState(null); // success | error | null
 
     const bookingData ={
     phone :whatsapp,
@@ -18,8 +19,22 @@ export default function OnStage() {
         <TheatreBackground />
         <div className="flex flex-col justify-center items-center mt-20 mb-10 gap-8">
             <img src="src/assets/images/factoryshow.jpg" alt="playimg" className="md:w-80 w-[85%] h-118 rounded-lg object-cover" />
+
             <div className="flex flex-col items-center justify-center text-center gap-4">
                 <h2 className="text-xl text-white font-bold p-2 mt-2 mb-2 text-center"> مخلفات مصنع الكرتون </h2>
+
+                <div className="flex flex-col items-center justify-center gap-2 border-2 border-[#c6a15b] rounded-lg p-4 w-[90%]">
+                    <p className="text-[#c6a15b] text-lg font-bold">المواعيد المتاحة :</p>
+                   <div className="flex flex-row items-center gap-2 justify-center">
+                    <div className="inline-grid *:[grid-area:1/1] ">
+                        <div className="status status-info animate-ping"></div>
+                        <div className="status status-info"></div>
+                    </div><p className="text-white text-md">السبت 28/3/2026</p>
+                </div>
+                 <p className="text-white text-md">الساعة 6:30 م</p>
+                </div>
+
+
                 <div className="border-2 border-[#c6a15b] rounded-lg p-4 gap-2 w-[90%]">
                     <p className="text-[#c6a15b] text-lg font-bold">العنوان</p>
                     <p className="text-white text-sm mb-2">يعرض علي مسرح كنيسة مارجرجس الجيوشي - شبرا مصر - بجوار محطة مترو مسرة </p>
@@ -47,12 +62,27 @@ export default function OnStage() {
                         </div>
                         <input type="text" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} placeholder="01xxxxxxxxx" className={`border-2 rounded-lg p-2 mt-2`} />
                         <p className="text-sm mb-3 mt-4">برجاء رفع ايصال الدفع او سكرين شوت لعملية التحويل</p>
-                        <input type="file" className="file-input file-input-warning w-[90%]" />
+                        <input type="file" value={file} onChange={(e) => setFile(e.target.value)} className="file-input file-input-warning w-[90%]" />
                     </form>
-                    <button className="btn btn-warning mt-4 mb-2" onClick={() => { setShow(true), setTimeout(() => setShow(false), 6000) }}>تأكيد الدفع</button>
-                    {show && <>
+                    <button className="btn btn-warning mt-4 mb-2" onClick={() => {
+                        if (whatsapp !== "" && file !== "") {
+                            setStatus("success");
+                            setShow(true);
+                            setTimeout(() => setShow(false), 6000);
+                            setWhatsapp("");
+                            setFile("");
+                        } else {
+                            setStatus("error");
+                            setShow(true);
+                            setTimeout(() => setShow(false), 6000);
+                        }
+                    }}>تأكيد الدفع</button>
+                    {status === "success" && <>
                         <p className="text-sm mt-2 text-center text-green-500 flex flex-row items-center justify-center gap-2">  تم حفظ البيانات بنجاح <Icon icon="ic:baseline-check-circle" width="14" height="14" /></p>
                         <p className="text-sm text-center"> سيتواصل احد اعضاء فريق العمل معكم في اقرب وقت لتأكيد عملية الدفع </p>
+                    </>}
+                    {status === "error" && <>
+                        <p className="text-sm mt-2 text-center text-red-500 flex flex-row items-center justify-center gap-2">  برجاء ملء جميع البيانات  <Icon icon="ix:error-filled" width="14" height="14" /></p>
                     </>}
                 </div>
             </div>

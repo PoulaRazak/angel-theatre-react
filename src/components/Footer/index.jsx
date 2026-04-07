@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <img
               className="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]"
-              src="src/assets/images/angel-logo1.png"
+              src="/images/angel-logo1.png"
               alt="logo"
             />
             <span

@@ -71,7 +71,7 @@ export default function Navbar() {
                 <a href="/" className="flex items-center gap-3" >
                     <img
                         className="w-9 md:w-12 h-9 md:h-12 object-contain drop-shadow-[0_0_8px_rgba(255,215,0,0.4)] "
-                        src="src/assets/images/angel-logo1.png"
+                        src="/images/angel-logo1.png"
                         alt="logo"
                     />
                     <span

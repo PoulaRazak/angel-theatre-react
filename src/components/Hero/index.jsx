@@ -122,7 +122,7 @@ export default function Hero() {
             {/* 🖼️ Background */}
             <img
                 ref={bgRef}
-                src="src/assets/images/victorian.jpg"
+                src="/images/victorian.jpg"
                 className="absolute inset-0 w-full h-full object-cover opacity-40"
             />
 
@@ -162,7 +162,7 @@ export default function Hero() {
                 ref={leftCurtain}
                 className="absolute top-0 left-0 w-1/2 h-full z-30"
                 style={{
-                    backgroundImage: "url('src/assets/images/velvet3.jpg')",
+                    backgroundImage: "url('/images/velvet3.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "left",
                 }}
@@ -173,7 +173,7 @@ export default function Hero() {
                 ref={rightCurtain}
                 className="absolute top-0 right-0 w-1/2 h-full z-30"
                 style={{
-                    backgroundImage: "url('src/assets/images/velvet3r.jpg')",
+                    backgroundImage: "url('/images/velvet3r.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "right",
                 }}

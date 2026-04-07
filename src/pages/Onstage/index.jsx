@@ -48,8 +48,8 @@ export default function OnStage() {
                     <p className="text-sm mt-2">السعر الإجمالي : {tickets * 50} جنيه</p>
                     <p>برجاء تحويل مبلغ مالي قدره <span className="text-[#c6a15b]">{tickets * 50}</span> جنيه باحدي الطرق التالية :</p>
                     <div className="flex flex-row items-center justify-center gap-4 mt-2">
-                        <img src="src/assets/images/orange1.png" alt="orange" className="w-10 h-10 rounded-lg" onClick={() => window.open("https://orange.eg/en/pay/01274120056", "_blank")} />
-                        <img src="src/assets/images/instapay.png" alt="instapay" className="w-10 h-10 object-contain rounded-lg" onClick={() => window.open("https://ipn.eg/S/polarazakqnb/instapay/6Gzott", "_blank")} />
+                        <img src="/images/orange1.png" alt="orange" className="w-10 h-10 rounded-lg" onClick={() => window.open("https://orange.eg/en/pay/01274120056", "_blank")} />
+                        <img src="/images/instapay.png" alt="instapay" className="w-10 h-10 object-contain rounded-lg" onClick={() => window.open("https://ipn.eg/S/polarazakqnb/instapay/6Gzott", "_blank")} />
                     </div>
                 </div>
 

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 export default function OnStageCard() {
 
-
+const navigate = useNavigate();
 
     const [show, setShow] = useState(false);
 
@@ -38,6 +39,7 @@ export default function OnStageCard() {
                     </div><p className="text-sm">1 موعد متاح</p>
                 </div>
                 <button className="mr-2 px-5 py-2 rounded-md text-sm font-bold transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                onClick={()=>navigate("/onstage-details")}
                     style={{
                         background: "linear-gradient(135deg, #c6a15b, #e8c97a, #c6a15b)",
                         color: "#1a0f00",

@@ -5,6 +5,7 @@ import OldShows from "../pages/OldShows"
 import AboutUs from "../pages/Aboutus"
 import WorkShops from "../pages/WorkShops"
 import ShowDetails from "../pages/ShowDetails"
+import OnStage from "../pages/Onstage"
 
 export default function AppRouter(){
 
@@ -17,7 +18,8 @@ export default function AppRouter(){
                 {path:"/old-shows", element:<OldShows/>},
                 {path:"/workshops", element:<WorkShops/>},
                 {path:"/about-us", element:<AboutUs/>},
-                {path:"/show-details/:id", element:<ShowDetails/>}
+                {path:"/show-details/:id", element:<ShowDetails/>},
+                {path:"/onstage-details", element:<OnStage/>},
             ]
         }
     ])

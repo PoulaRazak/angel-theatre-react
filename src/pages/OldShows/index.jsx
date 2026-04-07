@@ -1,5 +1,3 @@
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
 import TheatreCard from "../../components/TheatreCard";
 import TheatreBackground from "../../components/background";
 import { plays } from "../../data/plays";

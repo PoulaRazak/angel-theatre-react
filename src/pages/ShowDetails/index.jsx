@@ -62,13 +62,19 @@ export default function ShowDetails() {
                         <p className="text-lg" key={index}>🏆 {award}</p>
                     ))}
                 </div>
+                {show.promo && (
+                    <div className="border-2 border-[#c6a15b] mx-8 rounded-lg">
+                        <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold">برومو العرض </p>
+                        <iframe width="315" height="576" src={show.promo} title="برومو العرض المسرحي الجريمة والعقاب" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                )}
 
                 {/* Posters Carousel */}
                 {show.posters.length > 0 && (
                 <div className="border-2 border-[#c6a15b] mx-8 rounded-lg">
                     <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold">بوسترات العرض </p>
                     <div className="carousel carousel-center bg-neutral rounded-box max-w-md h-100 space-x-4 p-4">
-                        {[1,2,3,4,5,6,7,8,9,10,11,12].map((i) => (
+                        {[0,1,2,3,4,5,6,7,8,9,10,11,12,13].map((i) => (
                             show.posters[i] && (
                                 <div key={i} className="carousel-item">
                                     <img
@@ -89,7 +95,7 @@ export default function ShowDetails() {
                 <div className="border-2 border-[#c6a15b] mx-8 rounded-lg">
                     <p className="text-center text-[#c6a15b] mt-2 text-xl font-bold">صور من العرض </p>
                     <div className="carousel carousel-center bg-neutral rounded-box max-w-md h-100 space-x-4 p-4">
-                        {[0,3,4,6,7,8,10,11,12,13,14,15,16,17,18,19,20].map((i) => (
+                        {[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map((i) => (
                             show.carousel[i] && (
                                 <div key={i} className="carousel-item">
                                     <img

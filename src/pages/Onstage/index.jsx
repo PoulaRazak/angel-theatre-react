@@ -18,7 +18,7 @@ export default function OnStage() {
     return <>
         <TheatreBackground />
         <div className="flex flex-col justify-center items-center mt-20 mb-10 gap-8">
-            <img src="src/assets/images/factoryshow.jpg" alt="playimg" className="md:w-80 w-[85%] h-118 rounded-lg object-cover" />
+            <img src="../../assets/images/factoryshow.jpg" alt="playimg" className="md:w-80 w-[85%] h-118 rounded-lg object-cover" />
 
             <div className="flex flex-col items-center justify-center text-center gap-4">
                 <h2 className="text-xl text-white font-bold p-2 mt-2 mb-2 text-center"> مخلفات مصنع الكرتون </h2>

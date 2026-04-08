@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import Navbar from "../Navbar";
 import ScrollTop from "../ScrollTop";
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 export default function Layout(){
     return <>
@@ -12,6 +12,6 @@ export default function Layout(){
     <Footer/>
     <ScrollTop/>
     <Analytics />
-    <SpeedInsights />
+    <SpeedInsights/>
     </>
 }

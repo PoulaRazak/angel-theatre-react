@@ -75,31 +75,31 @@ export default function Hero() {
         )
 
         // hold Phase 1 on screen for a beat
-        .to({}, { duration: 0.6 })
+        .to({}, { duration: 0.2 })
 
         // Phase 1 fades OUT
         .to(dioceseRef.current, {
             opacity: 0,
             y: -30,
             ease: "power2.in",
-            duration: 0.4,
+            duration: 0.2,
         })
 
         // ─── Phase 2: Church text fades IN ───────────────────────────────────
         .fromTo(churchRef.current,
             { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, ease: "power2.out", duration: 0.5 }
+            { opacity: 1, y: 0, ease: "power2.out", duration: 0.2 }
         )
 
         // hold Phase 2
-        .to({}, { duration: 0.6 })
+        .to({}, { duration: 0.2 })
 
         // Phase 2 fades OUT
         .to(churchRef.current, {
             opacity: 0,
             y: -30,
             ease: "power2.in",
-            duration: 0.4,
+            duration: 0.2,
         })
 
         // ─── Phase 3: Original hero content ──────────────────────────────────

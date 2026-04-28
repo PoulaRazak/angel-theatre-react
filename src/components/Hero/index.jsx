@@ -70,7 +70,8 @@ export default function Hero() {
         // ─── Phase 1: Diocese text fades IN ──────────────────────────────────
         .fromTo(dioceseRef.current,
             { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, ease: "power2.out", duration: 0.5 }
+            { opacity: 1, y: 0, ease: "power2.out", duration: 0.5 },
+            "<"
         )
 
         // hold Phase 1 on screen for a beat

@@ -166,10 +166,6 @@ export default function Hero() {
                     <span className="block w-16 h-px bg-[#c6a15b] opacity-60" />
                 </div>
 
-                <p className="text-sm md:text-base tracking-[0.3em] uppercase text-[#c6a15b] opacity-80 mb-3">
-                    برعاية كريمة من
-                </p>
-
                 <h2 className="text-3xl md:text-5xl font-bold leading-relaxed mb-4"
                     style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}>
                     مطرانية شبرا الخيمة وتوابعها

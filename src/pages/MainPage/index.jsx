@@ -11,7 +11,7 @@ export default function MainHome() {
     //   className=" bg-[#1a120b]"
      >
     <Hero/>
-        <h1 className="text-2xl text-[#c6a15b] font-bold text-center mt-20"> يعرض الان علي المسرح  </h1>
+        <h1 className="text-2xl text-[#c6a15b] font-bold text-center mt-20"> قريبًا علي المسرح  </h1>
 
     <TheatreBackground/>
         <div className="flex flex-row flex-wrap">

@@ -19,8 +19,10 @@ const navigate = useNavigate();
             >
                 عرض جديد 🔥
             </div>
-            <img src="/images/factoryshow.jpg" alt="" className="h-120 w-100 object-cover rounded-lg " />
-            <h2 className="text-xl text-white font-bold p-2 mt-2 mb-4"> مخلفات مصنع الكرتون </h2>
+            <img src="/images/elrasan.png" alt="" className="h-140 w-100 object-cover rounded-lg " />
+            <h2 className="text-xl text-white font-bold p-2 mt-1.5 mb-4">الرَّسَن</h2>
+
+            {/* <h2 className="text-xl text-white font-bold p-2 mt-2 mb-4"> مخلفات مصنع الكرتون </h2>
             <div className="text-white text-sm ">يعرض علي مسرح كنيسة مارجرجس الجيوشي - شبرا مصر</div>
             <div className="text-white text-sm ">للأستفسارات يرجي التواصل علي الرقم  01274120056 </div>
             <div className="text-white text-sm p-2">المواعيد : </div>
@@ -45,7 +47,7 @@ const navigate = useNavigate();
                         color: "#1a0f00",
                         boxShadow: "0 2px 16px rgba(198,161,91,0.35)",
                     }}> الحجز والتفاصيل</button>
-            </div>
+            </div> */}
         </div>
     </>
 }

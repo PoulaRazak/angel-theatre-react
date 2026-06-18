@@ -19,7 +19,7 @@ const navigate = useNavigate();
             >
                 عرض جديد 🔥
             </div>
-            <img src="/images/elrasan.png" alt="" className="h-140 w-100 object-cover rounded-lg " />
+            <img src="/images/elrasan.png" alt="" className="h-100 w-120 md:h-140 md:w-100 object-cover rounded-lg " />
             <h2 className="text-xl text-white font-bold p-2 mt-1.5 mb-4">الرَّسَن</h2>
 
             {/* <h2 className="text-xl text-white font-bold p-2 mt-2 mb-4"> مخلفات مصنع الكرتون </h2>
